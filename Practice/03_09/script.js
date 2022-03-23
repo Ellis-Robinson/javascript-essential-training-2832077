@@ -23,4 +23,24 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  newName: function (name) {
+    this.name = name;
+  },
+  dyeBackpack: function (newColor) {
+    this.color = newColor;
+  },
+  sewNewPocket: function () {
+    if (this.pocketNum >= 20) {
+      console.log("You can not sew on any more pockets");
+    } else {
+      this.pocketNum += 1;
+    }
+  },
+  removePocket: function () {
+    if (this.pocketNum <= 1) {
+      console.log("You can not remove any more pockets");
+    } else {
+      this.pocketNum -= 1;
+    }
+  },
 };
